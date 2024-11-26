@@ -18,6 +18,22 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Debugging: Log the environment variables
+    console.log(
+      "EMAILJS_SERVICE_ID:",
+      process.env.REACT_APP_EMAILJS_SERVICE_ID
+    );
+    console.log(
+      "EMAILJS_TEMPLATE_ID:",
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+    );
+    console.log(
+      "EMAILJS_PUBLIC_KEY:",
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    );
+
+    // Debugging: Log the form data
+    console.log("Form Data:", formData);
 
     emailjs
       .send(
