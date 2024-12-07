@@ -26,3 +26,4 @@ EXPOSE 8143
 # Run Nginx server in the foreground
 CMD ["nginx", "-g", "daemon off;"]
 
+
