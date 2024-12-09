@@ -24,7 +24,7 @@ const Experience = () => {
         </div>
         <div className="experience-item">
           <div className="experience-divider"></div>
-          <p>➡️ Managed cloud services including AWS EC2, S3, and VPC.</p>
+          <p>➡️ Managed cloud services including AWS EC2, S3,CFT and VPC.</p>
         </div>
         <div className="experience-item">
           <div className="experience-divider"></div>

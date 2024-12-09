@@ -52,7 +52,7 @@ const Contact = () => {
           setFormData({ name: "", email: "", message: "" }); // Clear form
         },
         (error) => {
-          console.error("Error sending email:", error.text);
+          console.error("Error sending email: ", error.text);
           toast.error("Failed to send the message. Please try again.");
         }
       );

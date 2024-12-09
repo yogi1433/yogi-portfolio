@@ -12,7 +12,7 @@ const Home = () => {
       transition={{ duration: 1 }}>
       <motion.img
         src="./yogi_profile.jpg"
-        alt="Yogesh Hanuman"
+        alt="Yogesh Hanuman P"
         className="profile-pic"
         whileHover={{ scale: 1.1, rotate: 10 }}
         transition={{ type: "spring", stiffness: 200 }}
