@@ -1,0 +1,152 @@
+.home {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f4f4f9; /* Light background color */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50; /* Dark color for better contrast */
+}
+
+p {
+  font-size: 1.1rem;
+  color: #4b4b4b; /* Dark gray for text */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skills-section,
+.projects-section,
+.contact-section {
+  margin: 2rem 0;
+}
+
+.skills-section h2,
+.projects-section h2,
+.contact-section h2 {
+  font-size: 2rem;
+  color: #2980b9; /* Bright color for headers */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #2980b9;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* Removing default list styling */
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  gap: 1rem; /* Adds space between items */
+}
+
+/* Styling individual items in the skills list */
+.skills-list li {
+  background-color: #e0e5ec; /* Slightly darker background for contrast */
+  color: #2c3e50; /* Dark text color */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(25% - 1rem); /* Adjusts the width and allows wrapping */
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.skills-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #d1d7dc; /* Light hover effect */
+}
+
+/* Styling the project items */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Adjust min width for responsiveness */
+  gap: 1rem; /* Add space between grid items */
+  justify-content: center; /* Center the content */
+}
+
+.project-item {
+  background-color: #f8f9fa; /* Light background */
+  color: #2c3e50; /* Dark text color */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+/* Custom grid layout for 3 or 4 project items */
+.project-list:nth-child(3) .project-item:nth-child(3) {
+  grid-column: span 2; /* Make the third item span two columns */
+  justify-self: center; /* Center the last item in the next row */
+}
+
+.project-list:nth-child(4) .project-item:nth-child(1),
+.project-list:nth-child(4) .project-item:nth-child(2) {
+  grid-column: span 1; /* Place the first two items in the first row */
+}
+
+.project-list:nth-child(4) .project-item:nth-child(3),
+.project-list:nth-child(4) .project-item:nth-child(4) {
+  grid-column: span 1; /* Place the last two items in the second row */
+}
+
+.project-item h3 {
+  margin-top: 0;
+  color: #1abc9c; /* Highlight color for project titles */
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #7f8c8d; /* Subtle text color */
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #e9ecef; /* Light hover effect */
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 1024px) {
+  .project-item {
+    width: calc(50% - 1rem); /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    width: calc(100% - 1rem); /* Single column for small screens */
+  }
+}
+
+.contact-section a {
+  color: #2980b9; /* Bright color for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
